@@ -1,12 +1,17 @@
 package js.springexamples.recipeapp.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 @Data
+@EqualsAndHashCode(exclude = {"ingredients","categories"})
+@ToString(exclude = {"ingredients","categories"})
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity
 public class Recipe {
 
